@@ -1,5 +1,3 @@
-//@ts-nocheck
-
 const shoppingCart = () => {
   const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
   const mainContainer = document.getElementsByTagName("tbody")[0];
@@ -71,11 +69,11 @@ const shoppingCart = () => {
     const totalPrice = document.getElementsByClassName("item-total-price");
     for (let i = 0; i < totalPrice.length; i++) {
       const totalPriceContent = Number(
-        totalPrice[i].innerText.replace("$", "")
+        totalPrice[i].textContent.replace("$", "")
       );
       total += Math.floor(totalPriceContent);
     }
-    grandTotal.children[0].innerText = "$" + total;
+    grandTotal.children[0].textContent = "$" + total;
   }
 
   function removeItem(event) {
