@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="./dist/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper wrapper | js-header">
+        <div class="header__logo-box logo-box">
+          <img
+            src="./src/images/logo.png"
+            alt="Logo"
+            class="header__logo logo"
+          />
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="javascript:;" class="nav__item-link">Products</a>
+            </li>
+            <li class="nav__item">
+              <a href="javascript:;" class="nav__item-link">Rooms</a>
+            </li>
+            <li class="nav__item">
+              <a href="javascript:;" class="nav__item-link">Inspirations</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="banner">
+      <div class="banner__wrapper wrapper">
+        <div class="banner__content-box">
+          <h1 class="banner__title page-title">
+            <span>Make your</span> home beautiful
+          </h1>
+          <p class="banner__text page-text">
+            The best simple place where you discover most wonderful furnitures
+            and make your home beautiful
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="products__wrapper wrapper">
+        <h2 class="products__title section-title">Our products</h2>
+        <div class="products__card-wrapper">
+          <div class="products__card">
+            <img
+              src="./src/images/item-1.png"
+              alt="Item"
+              class="products__card-img"
+            />
+            <div class="products__card-body">
+              <h3 class="products__card-title">Extorp sofa</h3>
+              <p class="products__card-text">$599</p>
+              <a
+                href="javascript:;"
+                class="btn products__card-btn | add-to-cart-btn"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+
+          <div class="products__card">
+            <img
+              src="./src/images/item-2.png"
+              alt="Item"
+              class="products__card-img"
+            />
+            <div class="products__card-body">
+              <h3 class="products__card-title">Jan Sflanaganvik sofa</h3>
+              <p class="products__card-text">$599</p>
+              <a
+                href="javascript:;"
+                class="btn products__card-btn | add-to-cart-btn"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+
+          <div class="products__card">
+            <img
+              src="./src/images/item-3.png"
+              alt="Item"
+              class="products__card-img"
+            />
+            <div class="products__card-body">
+              <h3 class="products__card-title">Sverom chair</h3>
+              <p class="products__card-text">$400</p>
+              <a
+                href="javascript:;"
+                class="btn products__card-btn | add-to-cart-btn"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+
+          <div class="products__card">
+            <img
+              src="./src/images/item-4.png"
+              alt="Item"
+              class="products__card-img"
+            />
+            <div class="products__card-body">
+              <h3 class="products__card-title">Coffee chair</h3>
+              <p class="products__card-text">$20</p>
+              <a
+                href="javascript:;"
+                class="btn products__card-btn | add-to-cart-btn"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+
+          <div class="products__card">
+            <img
+              src="./src/images/item-5.png"
+              alt="Item"
+              class="products__card-img"
+            />
+            <div class="products__card-body">
+              <h3 class="products__card-title">Minimal stand</h3>
+              <p class="products__card-text">$50</p>
+              <a
+                href="javascript:;"
+                class="btn products__card-btn | add-to-cart-btn"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+
+          <div class="products__card">
+            <img
+              src="./src/images/item-6.png"
+              alt="Item"
+              class="products__card-img"
+            />
+            <div class="products__card-body">
+              <h3 class="products__card-title">Norviken chair</h3>
+              <p class="products__card-text">$999</p>
+              <a
+                href="javascript:;"
+                class="btn products__card-btn | add-to-cart-btn"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+
+          <div class="products__card">
+            <img
+              src="./src/images/item-7.png"
+              alt="Item"
+              class="products__card-img"
+            />
+            <div class="products__card-body">
+              <h3 class="products__card-title">Simple desk</h3>
+              <p class="products__card-text">$50</p>
+              <a
+                href="javascript:;"
+                class="btn products__card-btn | add-to-cart-btn"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+
+          <div class="products__card">
+            <img
+              src="./src/images/item-8.png"
+              alt="Item"
+              class="products__card-img"
+            />
+            <div class="products__card-body">
+              <h3 class="products__card-title">Simple black lamp</h3>
+              <p class="products__card-text">$12.99</p>
+              <a
+                href="javascript:;"
+                class="btn products__card-btn | add-to-cart-btn"
+                >Add to Cart</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="products__card-cart">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th><h3 class="products__card-cart-title">item</h3></th>
+                <th></th>
+                <th><h3 h3 class="products__card-cart-title">price</h3></th>
+                <th><h3 h3 class="products__card-cart-title">quantity</h3></th>
+                <th><h3 h3 class="products__card-cart-title">total</h3></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tr class="products__card-cart-total">
+              <td><input type="checkbox" /></td>
+              <td></td>
+              <td>
+                <h3
+                  class="products__card-cart-text products__card-cart-text-grand-total | item-name"
+                >
+                  <strong>Grand Total</strong>
+                </h3>
+              </td>
+              <td><h3></h3></td>
+              <td><h3></h3></td>
+              <td class="item-grand-total">
+                <h3
+                  class="products__card-cart-text products__card-cart-text-grand-total"
+                >
+                  <strong>$0</strong>
+                </h3>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__wrapper wrapper">
+        <div class="footer__info">
+          <div class="footer__info-logo-box logo-box">
+            <img
+              src="./src/images/logo-footer.png"
+              alt="Logo"
+              class="footer__info-logo logo"
+            />
+          </div>
+          <p class="footer__info-text">
+            Worldwide furniture store since 2020. We sell over 1000+ branded
+            products on our website
+          </p>
+          <a
+            class="footer__info-link"
+            href="https://www.google.com/maps/place/Novi+Sad/@45.2307583,19.8318474,17z/data=!3m1!4b1!4m8!3m7!1s0x475b115763085acd:0x6a553ab084e8076e!5m2!4m1!1i2!8m2!3d45.2307162!4d19.8339265"
+            target="_blank"
+          >
+            <svg
+              width="16"
+              height="19"
+              viewBox="0 0 16 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.97404 18.5413C11.0898 17.0976 15.9167 13.3048 15.9167 8.74992C15.9167 4.37766 12.3723 0.833252 8 0.833252C3.62775 0.833252 0.083334 4.37766 0.083334 8.74992C0.083334 13.3048 4.91025 17.0976 7.02596 18.5413C7.61759 18.945 8.38241 18.945 8.97404 18.5413ZM8 11.2499C9.38071 11.2499 10.5 10.1306 10.5 8.74992C10.5 7.36921 9.38071 6.24992 8 6.24992C6.61929 6.24992 5.5 7.36921 5.5 8.74992C5.5 10.1306 6.61929 11.2499 8 11.2499Z"
+                fill="#898989"
+              />
+            </svg>
+            <p>Novi Sad, Serbia</p>
+          </a>
+          <a href="tel:+381 641234567" class="footer__info-link">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.4307 11.0668L10.9152 11.8401C10.8123 11.9944 10.6762 12.1261 10.4969 12.1735C9.90946 12.3287 8.3499 12.3988 5.9755 10.0244C3.60111 7.65004 3.67119 6.09046 3.82641 5.50302C3.8738 5.32368 4.00549 5.1876 4.15983 5.0847L4.93308 4.5692C5.50878 4.1854 5.66435 3.40757 5.28055 2.83187L3.82014 0.64126C3.48514 0.138762 2.83933 -0.0532187 2.28423 0.18468L1.62544 0.467021C1.12498 0.681503 0.716742 1.06643 0.47324 1.55343C0.269804 1.96031 0.112126 2.38877 0.0907621 2.84317C0.0234363 4.27515 0.337433 7.80312 4.26713 11.7328C8.19682 15.6625 11.7248 15.9765 13.1568 15.9092C13.6111 15.8878 14.0396 15.7301 14.4465 15.5267C14.9335 15.2832 15.3184 14.8749 15.5329 14.3745L15.8152 13.7157C16.0531 13.1606 15.8612 12.5148 15.3587 12.1798L13.168 10.7194C12.5923 10.3356 11.8145 10.4911 11.4307 11.0668Z"
+                fill="#898989"
+              />
+            </svg>
+            <p>+381 64 12 34 567</p>
+          </a>
+        </div>
+
+        <ul class="footer__items">
+          <h3 class="footer__items-title">Menu</h3>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">Products</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">Rooms</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">Inspirations</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">About Us</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">Terms & Policy</a>
+          </li>
+        </ul>
+
+        <ul class="footer__items">
+          <h3 class="footer__items-title">Account</h3>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">My account</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">Checkout</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">My cart</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">My catalog</a>
+          </li>
+        </ul>
+
+        <ul class="footer__items">
+          <h3 class="footer__items-title">Stay connected</h3>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">Facebook</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">Instagram</a>
+          </li>
+          <li class="footer__item">
+            <a href="javascript:;" class="footer__item-link">Twitter</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./dist/main.js"></script>
+  </body>
+</html>

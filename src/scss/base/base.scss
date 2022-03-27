@@ -1,0 +1,39 @@
+.wrapper {
+  max-width: 1840px;
+  width: 100%;
+  padding: 0 100px;
+  margin: 0 auto;
+}
+
+.logo-box {
+  max-width: 130px;
+  width: 100%;
+}
+
+.btn {
+  @extend .lato-24-normal;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 20px;
+  background-color: $pink;
+  color: $orange;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s;
+
+  @include hover {
+    background-color: $orange;
+    color: $pink;
+  }
+}
+
+.btn--full {
+  padding: 12px 24px;
+  background-color: $orange;
+  color: $pink;
+
+  @include hover {
+    background-color: $pink;
+    color: $orange;
+  }
+}
