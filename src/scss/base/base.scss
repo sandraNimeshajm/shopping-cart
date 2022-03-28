@@ -1,8 +1,20 @@
 .wrapper {
-  max-width: 1840px;
+  max-width: 1640px;
   width: 100%;
   padding: 0 100px;
   margin: 0 auto;
+
+  @include mq(1440) {
+    padding: 0 64px;
+  }
+
+  @include mq(1240) {
+    padding: 0 48px;
+  }
+
+  @include mq(991) {
+    padding: 0 32px;
+  }
 }
 
 .logo-box {
@@ -31,9 +43,20 @@
   padding: 12px 24px;
   background-color: $orange;
   color: $pink;
+  border: 2px solid $orange;
+  transition: background-color 0.3s, color 0.3s, border 0.3;
 
   @include hover {
     background-color: $pink;
     color: $orange;
+    border: 2px solid $orange;
   }
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
 }

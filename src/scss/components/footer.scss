@@ -1,16 +1,26 @@
 .footer {
-  padding: 128px 0 64px;
+  padding-bottom: 64px;
 }
 
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
   color: $grey;
+
+  @include mq(1150) {
+    flex-direction: column;
+  }
 }
 
 .footer__info {
   max-width: 400px;
   width: 100%;
+  margin-right: 24px;
+
+  @include mq(1150) {
+    margin-right: 0;
+    margin-bottom: 48px;
+  }
 }
 
 .footer__info-logo-box {
@@ -34,6 +44,33 @@
     width: 30px;
     height: 30px;
     margin-right: 16px;
+  }
+}
+
+.footer__items-container {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(480) {
+    flex-direction: column;
+  }
+}
+
+.footer__items {
+  &:not(:last-child) {
+    margin-right: 150px;
+
+    @include mq(1240) {
+      margin-right: 100px;
+    }
+
+    @include mq(570) {
+      margin-right: 48px;
+    }
+    @include mq(570) {
+      margin-right: 0;
+      margin-bottom: 48px;
+    }
   }
 }
 

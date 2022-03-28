@@ -19,7 +19,26 @@
           />
         </div>
 
-        <nav class="nav">
+        <div class="header__content">
+     
+        <div class="header__cart | js-cart">
+          <svg
+            class="header__cart-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 16C4.9 16 4.01 16.9 4.01 18C4.01 19.1 4.9 20 6 20C7.1 20 8 19.1 8 18C8 16.9 7.1 16 6 16ZM0 0V2H2L5.6 9.59L4.25 12.04C4.09 12.32 4 12.65 4 13C4 14.1 4.9 15 6 15H18V13H6.42C6.28 13 6.17 12.89 6.17 12.75L6.2 12.63L7.1 11H14.55C15.3 11 15.96 10.59 16.3 9.97L19.88 3.48C19.96 3.34 20 3.17 20 3C20 2.45 19.55 2 19 2H4.21L3.27 0H0ZM16 16C14.9 16 14.01 16.9 14.01 18C14.01 19.1 14.9 20 16 20C17.1 20 18 19.1 18 18C18 16.9 17.1 16 16 16Z"
+              fill="#e89f71"
+            />
+          </svg>
+            <span class="header__cart-quantity | js-product-quantity">0</span>
+        </div>
+
+        <nav class="nav | js-nav">
           <ul class="nav__items">
             <li class="nav__item">
               <a href="javascript:;" class="nav__item-link">Products</a>
@@ -31,8 +50,32 @@
               <a href="javascript:;" class="nav__item-link">Inspirations</a>
             </li>
           </ul>
+          </div>
         </nav>
+
+       
+
+        <div class="header__menu | js-menu">
+          <span class="header__menu-line"></span>
+        </div>
       </div>
+      <div class="header__modal-overlay | js-modal-overlay">
+          <div class="header__modal">
+            <span class="header__modal-close | js-close">
+              <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5009 15.3906L31.5086 1.48147L30.0894 0.0722656L16.0817 13.9814L2.07399 0.0723115L0.654785 1.48152L14.6625 15.3906L1.02282 28.9342L2.44202 30.3434L16.0817 16.7998L29.7214 30.3434L31.1406 28.9342L17.5009 15.3906Z" fill="black"/>
+</svg>
+</span>
+            <h1 class="header__modal-title">Cart is empty</h1>
+
+            <div class="header__products | js-products"></div>
+            <div class="header__total">
+              <h1 class="header__total-title">Total</h1>
+              <span class="header__total-price | js-total-price">$0</span>
+              <button class="header__purchase-btn btn btn--full | js-purchase">Purchase</button>
+            </div>
+          </div>
+        </div>
     </header>
 
     <section class="banner">
@@ -57,14 +100,14 @@
             <img
               src="./src/images/item-1.png"
               alt="Item"
-              class="products__card-img"
+              class="products__card-img | js-product-img"
             />
             <div class="products__card-body">
-              <h3 class="products__card-title">Extorp sofa</h3>
-              <p class="products__card-text">$599</p>
+              <h3 class="products__card-title | js-product-title">Extorp sofa</h3>
+              <p class="products__card-text | js-product-price">$599</p>
               <a
                 href="javascript:;"
-                class="btn products__card-btn | add-to-cart-btn"
+                class="btn products__card-btn | js-add-to-cart-btn"
                 >Add to Cart</a
               >
             </div>
@@ -74,14 +117,14 @@
             <img
               src="./src/images/item-2.png"
               alt="Item"
-              class="products__card-img"
+              class="products__card-img | js-product-img"
             />
             <div class="products__card-body">
-              <h3 class="products__card-title">Jan Sflanaganvik sofa</h3>
-              <p class="products__card-text">$599</p>
+              <h3 class="products__card-title | js-product-title">Jan Sflanaganvik sofa</h3>
+              <p class="products__card-text | js-product-price">$599</p>
               <a
                 href="javascript:;"
-                class="btn products__card-btn | add-to-cart-btn"
+                class="btn products__card-btn | js-add-to-cart-btn"
                 >Add to Cart</a
               >
             </div>
@@ -91,14 +134,14 @@
             <img
               src="./src/images/item-3.png"
               alt="Item"
-              class="products__card-img"
+              class="products__card-img | js-product-img"
             />
             <div class="products__card-body">
-              <h3 class="products__card-title">Sverom chair</h3>
-              <p class="products__card-text">$400</p>
+              <h3 class="products__card-title | js-product-title">Sverom chair</h3>
+              <p class="products__card-text | js-product-price">$400</p>
               <a
                 href="javascript:;"
-                class="btn products__card-btn | add-to-cart-btn"
+                class="btn products__card-btn | js-add-to-cart-btn"
                 >Add to Cart</a
               >
             </div>
@@ -108,14 +151,14 @@
             <img
               src="./src/images/item-4.png"
               alt="Item"
-              class="products__card-img"
+              class="products__card-img | js-product-img"
             />
             <div class="products__card-body">
-              <h3 class="products__card-title">Coffee chair</h3>
-              <p class="products__card-text">$20</p>
+              <h3 class="products__card-title | js-product-title">Coffee chair</h3>
+              <p class="products__card-text | js-product-price">$20</p>
               <a
                 href="javascript:;"
-                class="btn products__card-btn | add-to-cart-btn"
+                class="btn products__card-btn | js-add-to-cart-btn"
                 >Add to Cart</a
               >
             </div>
@@ -125,14 +168,14 @@
             <img
               src="./src/images/item-5.png"
               alt="Item"
-              class="products__card-img"
+              class="products__card-img | js-product-img"
             />
             <div class="products__card-body">
-              <h3 class="products__card-title">Minimal stand</h3>
-              <p class="products__card-text">$50</p>
+              <h3 class="products__card-title | js-product-title">Minimal stand</h3>
+              <p class="products__card-text | js-product-price">$50</p>
               <a
                 href="javascript:;"
-                class="btn products__card-btn | add-to-cart-btn"
+                class="btn products__card-btn | js-add-to-cart-btn"
                 >Add to Cart</a
               >
             </div>
@@ -142,14 +185,14 @@
             <img
               src="./src/images/item-6.png"
               alt="Item"
-              class="products__card-img"
+              class="products__card-img | js-product-img"
             />
             <div class="products__card-body">
-              <h3 class="products__card-title">Norviken chair</h3>
-              <p class="products__card-text">$999</p>
+              <h3 class="products__card-title | js-product-title">Norviken chair</h3>
+              <p class="products__card-text | js-product-price">$999</p>
               <a
                 href="javascript:;"
-                class="btn products__card-btn | add-to-cart-btn"
+                class="btn products__card-btn | js-add-to-cart-btn"
                 >Add to Cart</a
               >
             </div>
@@ -159,14 +202,14 @@
             <img
               src="./src/images/item-7.png"
               alt="Item"
-              class="products__card-img"
+              class="products__card-img | js-product-img"
             />
             <div class="products__card-body">
-              <h3 class="products__card-title">Simple desk</h3>
-              <p class="products__card-text">$50</p>
+              <h3 class="products__card-title | js-product-title">Simple desk</h3>
+              <p class="products__card-text | js-product-price">$50</p>
               <a
                 href="javascript:;"
-                class="btn products__card-btn | add-to-cart-btn"
+                class="btn products__card-btn | js-add-to-cart-btn"
                 >Add to Cart</a
               >
             </div>
@@ -176,55 +219,21 @@
             <img
               src="./src/images/item-8.png"
               alt="Item"
-              class="products__card-img"
+              class="products__card-img | js-product-img"
             />
             <div class="products__card-body">
-              <h3 class="products__card-title">Simple black lamp</h3>
-              <p class="products__card-text">$13</p>
+              <h3 class="products__card-title | js-product-title">Simple black lamp</h3>
+              <p class="products__card-text | js-product-price">$13</p>
               <a
                 href="javascript:;"
-                class="btn products__card-btn | add-to-cart-btn"
+                class="btn products__card-btn | js-add-to-cart-btn"
                 >Add to Cart</a
               >
             </div>
           </div>
         </div>
 
-        <div class="products__card-cart">
-          <table>
-            <thead>
-              <tr>
-                <th></th>
-                <th><h3 class="products__card-cart-title">item</h3></th>
-                <th></th>
-                <th><h3 h3 class="products__card-cart-title">price</h3></th>
-                <th><h3 h3 class="products__card-cart-title">quantity</h3></th>
-                <th><h3 h3 class="products__card-cart-title">total</h3></th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-            <tr class="products__card-cart-total">
-              <td><input type="checkbox" /></td>
-              <td></td>
-              <td>
-                <h3
-                  class="products__card-cart-text products__card-cart-text-grand-total | item-name"
-                >
-                  <strong>Grand Total</strong>
-                </h3>
-              </td>
-              <td><h3></h3></td>
-              <td><h3></h3></td>
-              <td class="item-grand-total">
-                <h3
-                  class="products__card-cart-text products__card-cart-text-grand-total"
-                >
-                  <strong>$0</strong>
-                </h3>
-              </td>
-            </tr>
-          </table>
-        </div>
+      
       </div>
     </section>
 
@@ -280,53 +289,57 @@
           </a>
         </div>
 
-        <ul class="footer__items">
-          <h3 class="footer__items-title">Menu</h3>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">Products</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">Rooms</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">Inspirations</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">About Us</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">Terms & Policy</a>
-          </li>
-        </ul>
+        <div class="footer__items-container">
+          <ul class="footer__items">
+            <h3 class="footer__items-title">Menu</h3>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">Products</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">Rooms</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">Inspirations</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">About Us</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link"
+                >Terms & Policy</a
+              >
+            </li>
+          </ul>
 
-        <ul class="footer__items">
-          <h3 class="footer__items-title">Account</h3>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">My account</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">Checkout</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">My cart</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">My catalog</a>
-          </li>
-        </ul>
+          <ul class="footer__items">
+            <h3 class="footer__items-title">Account</h3>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">My account</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">Checkout</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">My cart</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">My catalog</a>
+            </li>
+          </ul>
 
-        <ul class="footer__items">
-          <h3 class="footer__items-title">Stay connected</h3>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">Facebook</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">Instagram</a>
-          </li>
-          <li class="footer__item">
-            <a href="javascript:;" class="footer__item-link">Twitter</a>
-          </li>
-        </ul>
+          <ul class="footer__items">
+            <h3 class="footer__items-title">Stay connected</h3>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">Facebook</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">Instagram</a>
+            </li>
+            <li class="footer__item">
+              <a href="javascript:;" class="footer__item-link">Twitter</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
     <script src="./dist/main.js"></script>

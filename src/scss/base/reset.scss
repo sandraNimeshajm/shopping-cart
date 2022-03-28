@@ -27,6 +27,10 @@ body {
   @extend .lato-24-normal;
   background-color: $pink;
   color: $black;
+
+  &.fixed {
+    overflow-y: hidden;
+  }
 }
 
 a {
