@@ -38,7 +38,17 @@ const shoppingCart = () => {
 
   function addToCartClicked(event) {
     const btn = event.target;
+    console.log(btn);
     const cartItem = btn.parentElement;
+
+    const addedToCart = document.querySelectorAll(".js-added-to-cart");
+    console.log(addedToCart);
+    // for (let i = 0; i < addedToCart.length; i++) {
+    //   addedToCart[i].classList.add("show");
+    //   console.log(addedToCart[i]);
+    // }
+
+    alert("Item added to the cart");
 
     const title =
       cartItem.getElementsByClassName("js-product-title")[0].innerText;
@@ -75,7 +85,7 @@ const shoppingCart = () => {
       `;
     productRow.innerHTML = cartRowItems;
     productRows.append(productRow);
-    alert("Item added to the cart");
+
     productRow
       .getElementsByClassName("product-remove")[0]
       .addEventListener("click", removeItem);

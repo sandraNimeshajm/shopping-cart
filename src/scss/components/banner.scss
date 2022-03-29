@@ -27,3 +27,15 @@
     color: $grey;
   }
 }
+
+@include mq(1921, min) {
+  .banner__wrapper {
+    padding-top: 7.8125vw;
+  }
+  .banner__content-box {
+    max-width: 29.16667vw;
+  }
+  .banner__title {
+    margin-bottom: 0.83333vw;
+  }
+}

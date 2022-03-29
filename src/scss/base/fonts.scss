@@ -155,3 +155,33 @@
     font-size: 12px;
   }
 }
+
+@include mq(1921, min) {
+  .lato-64-bold,
+  .page-title {
+    font-size: 3.33333vw;
+  }
+  .lato-54-bold {
+    font-size: 2.8125vw;
+  }
+  .lato-48-bold,
+  .section-title {
+    font-size: 2.5vw;
+  }
+  .lato-32-normal,
+  .page-text {
+    font-size: 1.66667vw;
+  }
+  .lato-28-normal {
+    font-size: 1.45833vw;
+  }
+  .lato-24-normal {
+    font-size: 1.25vw;
+  }
+  .lato-24-bold {
+    font-size: 1.25vw;
+  }
+  .lato-14-normal {
+    font-size: 0.72917vw;
+  }
+}

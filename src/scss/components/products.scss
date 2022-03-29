@@ -28,31 +28,33 @@
   width: 100%;
   margin: 0 auto;
   filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  position: relative;
+  overflow: hidden;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 5;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
+  // position: relative;
 
-  &:hover::before {
-    opacity: 1;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 0, 0, 0.3);
+  //   z-index: 5;
+  //   opacity: 0;
+  //   transition: opacity 0.5s;
+  // }
 
-  @include hover {
-    .products__card-btn {
-      opacity: 1;
-      z-index: 10;
-    }
-  }
+  // &:hover::before {
+  //   opacity: 1;
+  // }
+
+  // @include hover {
+  //   .products__card-btn {
+  //     opacity: 1;
+  //     z-index: 10;
+  //   }
+  // }
 
   @include mq(480) {
     max-width: 250px;
@@ -61,6 +63,11 @@
 
 .products__card-img {
   height: 400px;
+  transition: transform 0.3s;
+
+  @include hover {
+    transform: scale(1.05);
+  }
 
   @include mq(480) {
     height: 300px;
@@ -69,8 +76,9 @@
 
 .products__card-body {
   background-color: $white-3;
-  padding: 16px;
+  padding: 12px 24px;
 }
+
 .products__card-title {
   @extend .lato-28-normal;
   margin-bottom: 8px;
@@ -78,16 +86,25 @@
 
 .products__card-text {
   color: $grey;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .products__card-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-bottom: 8px;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // opacity: 0;
+  // transition: opacity 0.5s;
+}
+
+.products-added-to-cart {
   opacity: 0;
-  transition: opacity 0.5s;
+
+  &.show {
+    opacity: 1;
+  }
 }
 
 //CART
@@ -98,4 +115,44 @@
   width: 50px;
   height: 40px;
   text-align: center;
+}
+
+@include mq(1921, min) {
+  .products {
+    padding: 4.375vw 0;
+  }
+  .products__wrapper {
+    max-width: 95.83333vw;
+  }
+  .products__title {
+    margin-bottom: 1.66667vw;
+  }
+  .products__card-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(18.22917vw, 1fr));
+    grid-gap: 1.66667vw;
+    margin-bottom: 2.5vw;
+  }
+  .products__card {
+    max-width: 18.22917vw;
+    filter: drop-shadow(0 0.20833vw 0.20833vw rgba(0, 0, 0, 0.25));
+  }
+  .products__card-img {
+    height: 20.83333vw;
+  }
+  .products__card-body {
+    padding: 0.625vw 1.25vw;
+  }
+  .products__card-title {
+    margin-bottom: 0.41667vw;
+  }
+  .products__card-text {
+    margin-bottom: 0.83333vw;
+  }
+  .products__card-btn {
+    margin-bottom: 0.41667vw;
+  }
+  .product-quantity {
+    width: 2.60417vw;
+    height: 2.08333vw;
+  }
 }

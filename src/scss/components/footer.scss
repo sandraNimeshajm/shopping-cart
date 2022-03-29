@@ -25,6 +25,10 @@
 
 .footer__info-logo-box {
   margin-bottom: 24px;
+
+  img {
+    width: 130px;
+  }
 }
 
 .footer__info-text {
@@ -44,6 +48,26 @@
     width: 30px;
     height: 30px;
     margin-right: 16px;
+  }
+
+  p {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: $grey;
+      transition: width 0.3s ease-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 
@@ -104,5 +128,57 @@
 
   &:hover::after {
     width: 100%;
+  }
+}
+
+@include mq(1921, min) {
+  .footer {
+    padding-bottom: 3.33333vw;
+  }
+  .footer__info {
+    max-width: 20.83333vw;
+    margin-right: 1.25vw;
+  }
+  .footer__info-logo-box {
+    margin-bottom: 1.25vw;
+    img {
+      width: 6.77083vw;
+    }
+  }
+  .footer__info-text {
+    margin-bottom: 1.66667vw;
+  }
+  .footer__info-link {
+    &:not(:last-child) {
+      margin-bottom: 1.25vw;
+    }
+    svg {
+      width: 1.5625vw;
+      height: 1.5625vw;
+      margin-right: 0.83333vw;
+    }
+    p {
+      &::after {
+        height: 0.10417vw;
+      }
+    }
+  }
+  .footer__items {
+    &:not(:last-child) {
+      margin-right: 7.8125vw;
+    }
+  }
+  .footer__items-title {
+    margin-bottom: 1.66667vw;
+  }
+  .footer__item {
+    &:not(:last-child) {
+      margin-bottom: 1.25vw;
+    }
+  }
+  .footer__item-link {
+    &::after {
+      height: 0.10417vw;
+    }
   }
 }

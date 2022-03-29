@@ -28,15 +28,14 @@
   outline: none;
   cursor: pointer;
   padding: 20px;
-  background-color: $pink;
-  color: $orange;
+  background-color: transparent;
+  color: transparent;
   border: 2px solid transparent;
-  transition: background-color 0.3s, color 0.3s;
 
-  @include hover {
-    background-color: $orange;
-    color: $pink;
-  }
+  // @include hover {
+  //   background-color: $orange;
+  //   color: $pink;
+  // }
 }
 
 .btn--full {
@@ -59,4 +58,28 @@
 
 .mb-48 {
   margin-bottom: 48px;
+}
+
+@include mq(1921, min) {
+  .wrapper {
+    max-width: 85.41667vw;
+    padding: 0 5.20833vw;
+  }
+  .logo-box {
+    max-width: 6.77083vw;
+  }
+  .btn {
+    padding: 1.04167vw;
+    border: 0.10417vw solid transparent;
+  }
+  .btn--full {
+    padding: 0.625vw 1.25vw;
+    border: 0.10417vw solid $orange;
+  }
+  .mb-16 {
+    margin-bottom: 0.83333vw;
+  }
+  .mb-48 {
+    margin-bottom: 2.5vw;
+  }
 }

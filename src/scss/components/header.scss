@@ -200,6 +200,23 @@
     max-width: 25px;
     width: 100%;
     height: 25px;
+
+    path {
+      transition: fill 0.3s;
+      @include hover {
+        fill: $orange;
+      }
+    }
+
+    @include mq(768) {
+      max-width: 20px;
+      height: 25px;
+    }
+
+    @include mq(480) {
+      max-width: 18px;
+      height: 20px;
+    }
   }
 }
 
@@ -224,4 +241,62 @@
 .header__total-price {
   margin-bottom: 16px;
   display: block;
+}
+
+.header__products {
+  padding: 24px;
+}
+
+@include mq(1921, min) {
+  .header__cart {
+    margin-right: 1.25vw;
+    svg {
+      max-width: 1.30208vw;
+      height: 1.30208vw;
+    }
+  }
+  .header__cart-quantity {
+    top: -0.52083vw;
+    right: -0.36458vw;
+  }
+  .nav__item-link {
+    padding: 1.66667vw 2.5vw;
+    &::after {
+      height: 0.10417vw;
+    }
+  }
+  .header__menu {
+    width: 1.5625vw;
+    height: 1.04167vw;
+  }
+  .header__menu-line {
+    height: 0.20833vw;
+    &::before {
+      height: 0.20833vw;
+    }
+    &::after {
+      height: 0.20833vw;
+    }
+  }
+  .header__modal {
+    padding: 1.25vw;
+  }
+  .header__modal-close {
+    svg {
+      max-width: 1.30208vw;
+      height: 1.30208vw;
+    }
+  }
+  .header__modal-title {
+    margin-bottom: 0.83333vw;
+  }
+  .header__total-title {
+    margin-bottom: 0.83333vw;
+  }
+  .header__total-price {
+    margin-bottom: 0.83333vw;
+  }
+  .header__products {
+    padding: 1.25vw;
+  }
 }
