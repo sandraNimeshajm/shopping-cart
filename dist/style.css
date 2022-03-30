@@ -283,6 +283,7 @@ table {
 
 .btn {
   display: inline-block;
+  text-align: center;
   outline: none;
   cursor: pointer;
   padding: 20px;
@@ -295,7 +296,7 @@ table {
   background-color: #e89f71;
   color: #f9f1e7;
   border: 2px solid #e89f71;
-  transition: background-color 0.3s, color 0.3s, border 0.3; }
+  transition: background-color 0.3s, color 0.3s, border 0.3s; }
   @media only screen and (min-width: 768px) {
     .btn--full:hover {
       background-color: #f9f1e7;
@@ -460,7 +461,7 @@ table {
   height: 100%;
   background-color: #f9f1e7;
   z-index: 2;
-  transform: translateX(-200%);
+  transform: translateX(200%);
   overflow-y: scroll;
   transition: 0.5s ease-out; }
 
@@ -582,10 +583,12 @@ table {
     margin-bottom: 0.83333vw; } }
 
 .products {
-  padding: 84px 0; }
+  padding: 84px 0 128px; }
 
 .products__wrapper {
-  max-width: 1840px; }
+  max-width: 1840px;
+  display: flex;
+  flex-direction: column; }
 
 .products__title {
   margin-bottom: 32px;
@@ -602,28 +605,31 @@ table {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } }
 
 .products__card {
+  display: block;
   max-width: 350px;
   width: 100%;
   margin: 0 auto;
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  overflow: hidden; }
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)); }
   @media screen and (max-width: 480px) {
     .products__card {
       max-width: 250px; } }
+
+.products__card-img-box {
+  overflow: hidden; }
 
 .products__card-img {
   height: 400px;
   transition: transform 0.3s; }
   @media only screen and (min-width: 768px) {
     .products__card-img:hover {
-      transform: scale(1.05); } }
+      transform: scale(1.1); } }
   @media screen and (max-width: 480px) {
     .products__card-img {
       height: 300px; } }
 
 .products__card-body {
   background-color: #f4f5f7;
-  padding: 12px 24px; }
+  padding: 24px; }
 
 .products__card-title {
   margin-bottom: 8px; }
@@ -633,12 +639,15 @@ table {
   margin-bottom: 16px; }
 
 .products__card-btn {
-  margin-bottom: 8px; }
+  align-self: center; }
 
 .products-added-to-cart {
   opacity: 0; }
   .products-added-to-cart.show {
     opacity: 1; }
+
+.hidden {
+  display: none; }
 
 .product-quantity {
   display: block;

@@ -1,14 +1,15 @@
 //@ts-nocheck
+
 const shoppingCart = () => {
   // open cart modal
   const cart = document.querySelector(".js-cart");
   const cartModalOverlay = document.querySelector(".js-modal-overlay");
 
   cart.addEventListener("click", () => {
-    if (cartModalOverlay.style.transform === "translateX(-200%)") {
+    if (cartModalOverlay.style.transform === "translateX(200%)") {
       cartModalOverlay.style.transform = "translateX(0)";
     } else {
-      cartModalOverlay.style.transform = "translateX(-200%)";
+      cartModalOverlay.style.transform = "translateX(200%)";
     }
   });
   // end of open cart modal
@@ -17,12 +18,12 @@ const shoppingCart = () => {
   const closeBtn = document.querySelector(".js-close");
 
   closeBtn.addEventListener("click", () => {
-    cartModalOverlay.style.transform = "translateX(-200%)";
+    cartModalOverlay.style.transform = "translateX(200%)";
   });
 
   cartModalOverlay.addEventListener("click", (e) => {
     if (e.target.classList.contains("js-modal-overlay")) {
-      cartModalOverlay.style.transform = "translateX(-200%)";
+      cartModalOverlay.style.transform = "translateX(200%)";
     }
   });
   // end of close cart modal
@@ -38,17 +39,7 @@ const shoppingCart = () => {
 
   function addToCartClicked(event) {
     const btn = event.target;
-    console.log(btn);
     const cartItem = btn.parentElement;
-
-    const addedToCart = document.querySelectorAll(".js-added-to-cart");
-    console.log(addedToCart);
-    // for (let i = 0; i < addedToCart.length; i++) {
-    //   addedToCart[i].classList.add("show");
-    //   console.log(addedToCart[i]);
-    // }
-
-    alert("Item added to the cart");
 
     const title =
       cartItem.getElementsByClassName("js-product-title")[0].innerText;
@@ -86,6 +77,8 @@ const shoppingCart = () => {
     productRow.innerHTML = cartRowItems;
     productRows.append(productRow);
 
+    alert("Item added to the cart");
+
     productRow
       .getElementsByClassName("product-remove")[0]
       .addEventListener("click", removeItem);
@@ -93,6 +86,7 @@ const shoppingCart = () => {
       .getElementsByClassName("product-quantity")[0]
       .addEventListener("change", changeQuantity);
     updateCartPrice();
+    // showProducts();
   }
   // end of add products to cart
 
@@ -152,13 +146,11 @@ const shoppingCart = () => {
   // purchase items
   const purchaseBtn = document.querySelector(".js-purchase");
 
-  const closeCartModal = document.querySelector(".js-close");
-
   purchaseBtn.addEventListener("click", purchaseBtnClicked);
 
   function purchaseBtnClicked() {
     alert("Thank you for your purchase");
-    cartModalOverlay.style.transform = "translateX(-200%)";
+    cartModalOverlay.style.transform = "translateX(200%)";
     const cartItems = document.getElementsByClassName("js-products")[0];
     while (cartItems.hasChildNodes()) {
       cartItems.removeChild(cartItems.firstChild);

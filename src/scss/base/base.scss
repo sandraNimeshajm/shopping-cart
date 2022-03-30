@@ -25,6 +25,7 @@
 .btn {
   @extend .lato-24-normal;
   display: inline-block;
+  text-align: center;
   outline: none;
   cursor: pointer;
   padding: 20px;
@@ -43,7 +44,7 @@
   background-color: $orange;
   color: $pink;
   border: 2px solid $orange;
-  transition: background-color 0.3s, color 0.3s, border 0.3;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
 
   @include hover {
     background-color: $pink;
